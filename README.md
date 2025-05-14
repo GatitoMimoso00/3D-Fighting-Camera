@@ -1,8 +1,8 @@
 # 3D-Fighting-Camera
 Script and Mathematical operations involved on how this Camera works
-
 ![p1_p2](https://github.com/user-attachments/assets/74f5d77c-dfb1-42a2-9e0b-5a3ed8d6f849) 
-
+Keyboard movement of PJs is not implemented yet.
+In the Godot project you can move the cylynders by moving the nodes PJ1 and PJ2 to see how the camera reacts to the cylinders movement
 
 # Mathematical explanation
 ## Naive approach
