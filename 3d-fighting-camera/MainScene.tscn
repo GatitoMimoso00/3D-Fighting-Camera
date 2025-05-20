@@ -1,0 +1,339 @@
+[gd_scene load_steps=36 format=3 uid="uid://ki4r020k8o0m"]
+
+[ext_resource type="Script" uid="uid://1grj72kdnhl8" path="res://Camera3D_Script.gd" id="1_3mqji"]
+[ext_resource type="Texture2D" uid="uid://cs5c0wu18is3f" path="res://Background/Panorama_Enhanced.png" id="2_5crlr"]
+[ext_resource type="Script" uid="uid://5ton8sjtehsi" path="res://wall_limit.gd" id="2_a814b"]
+[ext_resource type="Script" uid="uid://bqi7n8nir1d6u" path="res://FM.gd" id="2_rpqi1"]
+[ext_resource type="Script" uid="uid://bgrcat4gnimfa" path="res://PJ1_CharacterBody3D.gd" id="3_rf2cd"]
+[ext_resource type="Script" uid="uid://df4iquegc63vo" path="res://PJ2_CharacterBody3D.gd" id="4_a814b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rf2cd"]
+height = 1.0
+radius = 20.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mqji"]
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+texture_filter = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_x4av3"]
+material = SubResource("StandardMaterial3D_3mqji")
+top_radius = 20.0
+bottom_radius = 20.0
+height = 1.0
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5crlr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbc2u"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 2
+disable_ambient_light = true
+albedo_color = Color(0.282353, 1, 0, 0.407843)
+disable_receive_shadows = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_torvr"]
+material = SubResource("StandardMaterial3D_hbc2u")
+size = Vector2(10, 10)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_8xkvn"]
+plane = Plane(0, 1.345, 0, 0)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a814b"]
+panorama = ExtResource("2_5crlr")
+
+[sub_resource type="Sky" id="Sky_5crlr"]
+sky_material = SubResource("PanoramaSkyMaterial_a814b")
+process_mode = 3
+radiance_size = 1
+
+[sub_resource type="Environment" id="Environment_hbc2u"]
+background_mode = 2
+sky = SubResource("Sky_5crlr")
+sky_custom_fov = 40.0
+sky_rotation = Vector3(0, 0.872665, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxrcv"]
+cull_mode = 2
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+disable_ambient_light = true
+albedo_color = Color(0, 0, 1, 0.678431)
+disable_receive_shadows = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_rf2cd"]
+material = SubResource("StandardMaterial3D_uxrcv")
+size = Vector3(0.1, 0.021, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf2cd"]
+cull_mode = 2
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+disable_ambient_light = true
+albedo_color = Color(1, 0, 0, 0.690196)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a814b"]
+material = SubResource("StandardMaterial3D_rf2cd")
+size = Vector3(40, 0.02, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a814b"]
+blend_mode = 4
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_5crlr"]
+material = SubResource("StandardMaterial3D_a814b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5crlr"]
+shading_mode = 0
+diffuse_mode = 3
+disable_ambient_light = true
+albedo_color = Color(0.707967, 0.707967, 0.707967, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_hbc2u"]
+material = SubResource("StandardMaterial3D_5crlr")
+inner_radius = 14.8
+outer_radius = 15.0
+rings = 30
+ring_segments = 6
+
+[sub_resource type="TorusMesh" id="TorusMesh_a814b"]
+material = SubResource("StandardMaterial3D_5crlr")
+inner_radius = 4.9
+outer_radius = 5.0
+rings = 30
+ring_segments = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1305s"]
+blend_mode = 4
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3mqji"]
+material = SubResource("StandardMaterial3D_1305s")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpqi1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rf2cd"]
+material = SubResource("StandardMaterial3D_1305s")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpqi1"]
+blend_mode = 4
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(0, 0, 1, 1)
+texture_filter = 1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uxrcv"]
+material = SubResource("StandardMaterial3D_rpqi1")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uxrcv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_a814b"]
+material = SubResource("StandardMaterial3D_rpqi1")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4av3"]
+blend_mode = 4
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(0.243137, 0.423529, 0.243137, 1)
+texture_filter = 1
+disable_receive_shadows = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rpqi1"]
+material = SubResource("StandardMaterial3D_x4av3")
+bottom_radius = 0.0
+height = 1.0
+
+[node name="MainScene" type="Node3D"]
+
+[node name="StageManager" type="Node3D" parent="."]
+
+[node name="FloorLimit" type="StaticBody3D" parent="StageManager"]
+input_ray_pickable = false
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StageManager/FloorLimit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("CylinderShape3D_rf2cd")
+
+[node name="Mesh" type="MeshInstance3D" parent="StageManager/FloorLimit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_x4av3")
+skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="StageManager"]
+transform = Transform3D(1, 0, 0, 0, -0.573576, 0.819152, 0, -0.819152, -0.573576, 0, 10, 0)
+light_bake_mode = 0
+shadow_enabled = true
+shadow_transmittance_bias = -16.0
+shadow_blur = 0.0
+directional_shadow_mode = 1
+
+[node name="WallLimit" type="StaticBody3D" parent="StageManager" node_paths=PackedStringArray("PJ1", "PJ2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.405144, 0, 0)
+input_ray_pickable = false
+script = ExtResource("2_a814b")
+PJ1 = NodePath("../../FightersManager/PJ1")
+PJ2 = NodePath("../../FightersManager/PJ2")
+
+[node name="WallPJ1" type="CollisionShape3D" parent="StageManager/WallLimit"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -20, 0, 2.44921e-15)
+shape = SubResource("WorldBoundaryShape3D_5crlr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StageManager/WallLimit/WallPJ1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+visible = false
+cast_shadow = 0
+mesh = SubResource("QuadMesh_torvr")
+
+[node name="WallPJ2" type="CollisionShape3D" parent="StageManager/WallLimit"]
+transform = Transform3D(-4.37113e-08, -0.999999, 4.37114e-08, 0, -4.37113e-08, -1, 0.999999, -4.37113e-08, 1.91069e-15, 20, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_8xkvn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StageManager/WallLimit/WallPJ2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+visible = false
+cast_shadow = 0
+mesh = SubResource("QuadMesh_torvr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="StageManager"]
+environment = SubResource("Environment_hbc2u")
+
+[node name="Canvas" type="Node3D" parent="StageManager"]
+
+[node name="LineZ" type="MeshInstance3D" parent="StageManager/Canvas"]
+cast_shadow = 0
+mesh = SubResource("BoxMesh_rf2cd")
+skeleton = NodePath("../..")
+
+[node name="LineX" type="MeshInstance3D" parent="StageManager/Canvas"]
+mesh = SubResource("BoxMesh_a814b")
+skeleton = NodePath("../..")
+
+[node name="Cam" type="MeshInstance3D" parent="StageManager/Canvas"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 20)
+cast_shadow = 0
+mesh = SubResource("PrismMesh_5crlr")
+skeleton = NodePath("../..")
+
+[node name="OuterRing" type="MeshInstance3D" parent="StageManager/Canvas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0)
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("TorusMesh_hbc2u")
+
+[node name="InnerRing" type="MeshInstance3D" parent="StageManager/Canvas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.035, 0)
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("TorusMesh_a814b")
+
+[node name="FightersManager" type="Node3D" parent="." node_paths=PackedStringArray("CharPJ1", "CharPJ2")]
+script = ExtResource("2_rpqi1")
+CharPJ1 = NodePath("PJ1")
+CharPJ2 = NodePath("PJ2")
+
+[node name="PJ1" type="CharacterBody3D" parent="FightersManager" node_paths=PackedStringArray("FM", "enemy")]
+transform = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -2.5, 3.36925e-05, 0)
+collision_layer = 0
+input_ray_pickable = false
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+floor_constant_speed = true
+platform_on_leave = 2
+script = ExtResource("3_rf2cd")
+FM = NodePath("..")
+enemy = NodePath("../PJ2")
+
+[node name="Mesh" type="MeshInstance3D" parent="FightersManager/PJ1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_3mqji")
+
+[node name="Collision" type="CollisionShape3D" parent="FightersManager/PJ1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_rpqi1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FightersManager/PJ1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.5)
+mesh = SubResource("SphereMesh_rf2cd")
+
+[node name="PJ2" type="CharacterBody3D" parent="FightersManager" node_paths=PackedStringArray("FM", "enemy")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 2.5, 3.36916e-05, 0)
+collision_layer = 0
+floor_constant_speed = true
+floor_max_angle = 1.5708
+platform_on_leave = 2
+script = ExtResource("4_a814b")
+FM = NodePath("..")
+enemy = NodePath("../PJ1")
+
+[node name="Mesh" type="MeshInstance3D" parent="FightersManager/PJ2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_uxrcv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FightersManager/PJ2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_uxrcv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FightersManager/PJ2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.5)
+mesh = SubResource("SphereMesh_a814b")
+
+[node name="CameraManager" type="Node3D" parent="." node_paths=PackedStringArray("PJ1", "PJ2", "FM", "Cam", "Sides_Label")]
+script = ExtResource("1_3mqji")
+PJ1 = NodePath("../FightersManager/PJ1")
+PJ2 = NodePath("../FightersManager/PJ2")
+FM = NodePath("../FightersManager")
+Cam = NodePath("Camera3D")
+Sides_Label = NodePath("Camera3D/Label3D")
+max_cam_height = 3.5
+max_topdownview_deg = -0.2
+
+[node name="Camera3D" type="Camera3D" parent="CameraManager"]
+transform = Transform3D(1, -1.4013e-45, 5.60519e-45, 0, 0.987688, 0.156434, -5.60519e-45, -0.156434, 0.987688, 5.60519e-45, 2, 6)
+keep_aspect = 0
+current = true
+fov = 80.0
+
+[node name="Mesh" type="MeshInstance3D" parent="CameraManager/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_rpqi1")
+skeleton = NodePath("")
+
+[node name="Label3D" type="Label3D" parent="CameraManager/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -0.5)
+pixel_size = 0.001
+offset = Vector2(0, 150)
+no_depth_test = true
+texture_filter = 1
+text = "P1_P2"
+font_size = 50
+outline_size = 10
+uppercase = true
+
+[node name="Camera3DOuter" type="Camera3D" parent="."]
+transform = Transform3D(0.265994, -0.339733, 0.902125, -2.58454e-08, 0.935838, 0.35243, -0.963975, -0.0937441, 0.248927, 6.03172, 3.34467, 4.33737)
+keep_aspect = 0
+fov = 80.0
