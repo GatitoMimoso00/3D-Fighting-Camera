@@ -2,8 +2,9 @@
 Script and Mathematical operations involved on how this Camera works
 ![Thumbnail](https://github.com/user-attachments/assets/81aba59c-557b-41e7-96f7-211c9aa709cf)  
 
-Keyboard movement of PJs is not implemented yet.
-In the Godot project you can move the cylynders by moving the nodes PJ1 and PJ2 to see how the camera reacts to the cylinders movement
+Keyboard movement implemented!
+Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)
+Blue Cylinder controls = I,J,K,L (Cross-UP = IJ or IL)
 
 # Mathematical explanation
 ## Naive approach
