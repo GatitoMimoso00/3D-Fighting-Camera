@@ -1,10 +1,10 @@
 # 3D-Fighting-Camera
-Script and Mathematical operations involved on how this Camera works
-![Thumbnail](https://github.com/user-attachments/assets/81aba59c-557b-41e7-96f7-211c9aa709cf)  
+Script and Mathematical operations involved on how this Camera works.  
+![Thumbnail](https://github.com/user-attachments/assets/ed217a80-8165-4f11-8107-8da59ca6281f)  
 
-Keyboard movement implemented!
-Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)
-Blue Cylinder controls = I,J,K,L (Cross-UP = IJ or IL)
+Keyboard movement implemented!  
+Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)  
+Blue Cylinder controls = I,J,K,L (Cross-UP = IJ or IL)  
 
 # Mathematical explanation
 ## Naive approach
