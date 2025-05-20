@@ -256,7 +256,7 @@ CharPJ1 = NodePath("PJ1")
 CharPJ2 = NodePath("PJ2")
 
 [node name="PJ1" type="CharacterBody3D" parent="FightersManager" node_paths=PackedStringArray("FM", "enemy")]
-transform = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -2.5, 3.36925e-05, 0)
+transform = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -2.5, 3.37054e-05, 0)
 collision_layer = 0
 input_ray_pickable = false
 axis_lock_angular_x = true
@@ -280,7 +280,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.5)
 mesh = SubResource("SphereMesh_rf2cd")
 
 [node name="PJ2" type="CharacterBody3D" parent="FightersManager" node_paths=PackedStringArray("FM", "enemy")]
-transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 2.5, 3.36916e-05, 0)
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 2.5, 3.36803e-05, 0)
 collision_layer = 0
 floor_constant_speed = true
 floor_max_angle = 1.5708

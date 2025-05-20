@@ -136,9 +136,9 @@ func _physics_process(delta: float) -> void:
 	
 	#Getter of the Direction Vector and the angle to rotate
 	perpendicular_vector_getter()
-	if (Distance_PJ >= min_distance_threshold):
-		#Final constructor of Camera's Position and Rotation
-		camera_virtual_setter()
+	
+	#Final constructor of Camera's Position and Rotation
+	camera_virtual_setter()
 	
 	#Interpolation done to move the Camera to the Virtual Position and rotation
 	camera_rotpos_applying(delta)
