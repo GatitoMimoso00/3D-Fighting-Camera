@@ -1,4 +1,6 @@
 # 3D-Fighting-Camera
+Camera that supports 3 axis of momevement like Tekken or Soul Calibur games.  
+Forwards and backwards, Side Step in and out; and Cross-up/under handling.  
 Script and Mathematical operations involved on how this Camera works.  
 ![Thumbnail](https://github.com/user-attachments/assets/ed217a80-8165-4f11-8107-8da59ca6281f)  
 
