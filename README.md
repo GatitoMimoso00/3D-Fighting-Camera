@@ -1,4 +1,4 @@
-# 3D-Fighting-Camera
+# 3D Fighting Camera
 Camera that supports 3 axis of momevement like Tekken or Soul Calibur games.  
 Forwards and backwards, Side Step in and out; and Cross-up/under handling.  
 Script and Mathematical operations involved on how this Camera works.  
@@ -67,5 +67,5 @@ This will give us a 3D Vector with only the Y Component, if this component is po
 >We can take Vector A like *CamtoCenter_vector* and Vector B like *PJ1Cam_vector*, their Y component are 0.  
 >The Vector AxB is the cross product *PJ1_crossed*, its Horizontal Components (X and Z) are 0.  
 
-# Next Aditions for future ver 3.0  
+# Next Adittion for future ver 3.0  
 Camera shake for game feeling!  
