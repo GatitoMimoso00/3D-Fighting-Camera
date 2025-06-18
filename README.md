@@ -67,5 +67,5 @@ This will give us a 3D Vector with only the Y Component, if this component is po
 >We can take Vector A like *CamtoCenter_vector* and Vector B like *PJ1Cam_vector*, their Y component are 0.  
 >The Vector AxB is the cross product *PJ1_crossed*, its Horizontal Components (X and Z) are 0.  
 
-# Next Aditions for future ver 2.0  
+# Next Aditions for future ver 3.0  
 Camera shake for game feeling!  
