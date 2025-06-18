@@ -1,1 +1,5 @@
-https://drive.google.com/file/d/1Q4AJIgTZYglgo4o0xb8d439YsInJhFok/view?usp=sharing
+https://drive.google.com/file/d/1Q4AJIgTZYglgo4o0xb8d439YsInJhFok/view?usp=sharing  
+
+Keyboard movement implemented!  
+Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)  
+Blue Cylinder controls = I,J,K,L (Cross-UP = IJ or IL)  
