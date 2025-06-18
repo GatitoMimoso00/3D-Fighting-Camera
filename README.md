@@ -2,7 +2,11 @@
 Camera that supports 3 axis of momevement like Tekken or Soul Calibur games.  
 Forwards and backwards, Side Step in and out; and Cross-up/under handling.  
 Script and Mathematical operations involved on how this Camera works.  
-![Thumbnail](https://github.com/user-attachments/assets/ed217a80-8165-4f11-8107-8da59ca6281f)  
+![Thumbnail 2 0](https://github.com/user-attachments/assets/6936cb77-5a37-4706-8675-0037102366b2)  
+
+##Video Preview
+https://youtu.be/GTq9b1KvTkE  
+https://youtu.be/1z2FMZxIdek  
 
 Keyboard movement implemented!  
 Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)  
