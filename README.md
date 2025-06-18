@@ -4,17 +4,13 @@ Forwards and backwards, Side Step in and out; and Cross-up/under handling.
 Script and Mathematical operations involved on how this Camera works.  
 ![Thumbnail 2 0](https://github.com/user-attachments/assets/6936cb77-5a37-4706-8675-0037102366b2)  
 
-##Video Preview
-https://youtu.be/GTq9b1KvTkE  
-https://youtu.be/1z2FMZxIdek  
-
-Keyboard movement implemented!  
-Yellow Cylinder controls = W,A,S,D (Cross-UP = WA or WD)  
-Blue Cylinder controls = I,J,K,L (Cross-UP = IJ or IL)  
+## Video Preview  
+https://www.youtube.com/watch?v=GTq9b1KvTkE  
+https://www.youtube.com/watch?v=1z2FMZxIdek  
 
 # Mathematical explanation
 ## Naive approach
-We can just create a 2D vector between PJ1 and PJ2 (*Vector_PJ*), wich sense goes from PJ1 to PJ2; and then creata a perpendicular 2D Vector (*Perp_Vector_PJ*) that intersectes in the mid point (*MidPoint_PJ*) and take the angle between these vectors to assign it to the camera rotation and from there set the camera position.
+Seen from above. We can just create a 2D vector between PJ1 and PJ2 (*Vector_PJ*), wich sense goes from PJ1 to PJ2; and then creata a perpendicular 2D Vector (*Perp_Vector_PJ*) that intersectes in the mid point (*MidPoint_PJ*) and take the angle between these vectors to assign it to the camera rotation and from there set the camera position.
 Problem is, *Perp_Vector_PJ* has fixed sense, given by *Vector_PJ*, causing the camera to always having the PJ1 on the Left Side and the PJ2 on the Right Side, even on *cross-ups*, *cross-unders* or just punctual collision issues where PJs pass each other trough.  
 ![1_naive](https://github.com/user-attachments/assets/3855e2a2-e2e2-4042-8530-026cc80412bb)  
 ![2_naive](https://github.com/user-attachments/assets/c73a01c0-5a6c-4b92-855c-599bf40571d3)  
@@ -39,13 +35,13 @@ With these vectors we can take the angular difference (*Ang_Diff*) between *Cam_
 > From here we can construct a 3D Vector (*Cam_Virtual_Rot*) that stores the 3-Axis Rotations that the camera must follow, and another 3D Vector (*Cam_Virtual_Pos*) that calcualates and store the position of the camera according to the *Cam_Virtual_Rot*.  
 >
 > ## Asigning Rotation
->New wit our camera rotated in the correct angle we can set the position in the space.  
+>Now with our camera rotated in the correct angle we can set the position in the space.  
 > **Cam_Virtual_Rot.x:** desired_topdown_degree  
 > **Cam_Virtual_Rot.y:** *Cam_YTarget_rot*  
 > **Cam_Virtual_Rot.z:** desired_tilt_degreee  
 >
 > ### Asigning Position
->New wit our camera rotated in the correct angle we can set the position in the space.  
+>Now with our camera rotated in the correct angle we can set the position in the space.  
 > **Cam_Virtual_Pos.x:** sin(*Cam_Virtual_Rot.y*) * desired_distance_from_midpoint) + *MidPoint_PJ.x*  
 > **Cam_Virtual_Pos.y:** desired_height  
 > **Cam_Virtual_Pos.z:** cos(*Cam_Virtual_Rot.y*) * desired_distance_from_midpoint) + *MidPoint_PJ.z*  
@@ -70,3 +66,6 @@ This will give us a 3D Vector with only the Y Component, if this component is po
 >This image illustrate how it works.  
 >We can take Vector A like *CamtoCenter_vector* and Vector B like *PJ1Cam_vector*, their Y component are 0.  
 >The Vector AxB is the cross product *PJ1_crossed*, its Horizontal Components (X and Z) are 0.  
+
+# Next Aditions for future ver 2.0  
+Camera shake for game feeling!  
