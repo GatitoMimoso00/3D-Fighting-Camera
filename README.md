@@ -29,6 +29,7 @@ Even with a sudden exchange of PJs positions, the *Scalar_Proj* remains perpendi
 
 With these vectors we can take the angular difference (*Ang_Diff*) between *Cam_Virtual_Direction* and *Scalar_Proj*, and subtract the result to the Camera Y Rotation.  
 ![Angluar_Difference](https://github.com/user-attachments/assets/46e897da-8ce4-45d9-8a0f-e28a8501da3d)  
+![Cam_Alligned](https://github.com/user-attachments/assets/f69455c0-0e59-46af-8c51-9d026c0ee2b3)  
 
 > ## Consideration
 > Code wise, *Ang_Diff* is subtract to a Virtual float variable called *Cam_YTarget_rot* wich stores the rotation in radians that the Camera must follow.  
