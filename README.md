@@ -1,5 +1,5 @@
 # 3D Fighting Camera
-Camera that supports 3 axis of momevement like Tekken or Soul Calibur games.  
+Camera that supports 3 axis of momevement like Tekken, Soul Calibur games or 3D Mortal Komabt era.  
 Forwards and backwards, Side Step in and out; and Cross-up/under handling.  
 Script and Mathematical operations involved on how this Camera works.  
 ![Thumbnail 2 0](https://github.com/user-attachments/assets/6936cb77-5a37-4706-8675-0037102366b2)  
@@ -18,16 +18,17 @@ Problem is, *Perp_Vector_PJ* has fixed sense, given by *Vector_PJ*, causing the 
 We can see that, no matter what, PJ1 is always clockwise acording to *Perp_Vector_PJ*.  
 
 ## New approach
-Create a new 2D Vector parallel to Perp_Vector_PJ (*Cam_Virtual_Direction*), it  represents the previous *Perp_Vector_PJ*; this new vector will be used to create another 2D Vector (*Scalar_Proj*) wich is the result of projecting *Cam_Virtual_Direction* onto *Perp_Vector_PJ*.  
+Create a new 2D Vector parallel to Perp_Vector_PJ (*Cam_Virtual_Direction*), it represents the previous *Perp_Vector_PJ*; this new vector will be used to create another 2D Vector (*Vectorial_Proj*) wich is the result of projecting *Cam_Virtual_Direction* onto *Perp_Vector_PJ*.  
 
 > **Cam_Virtual_Direction:** is a vector that represents the direction of the *Perp_Vector_PJ*, but not its sense is not used.  
-> **Scalar_Proj:** is a vector that has the direction of *Perp_Vector_PJ* and the sense of *Cam_Virtual_Direction*.  
+> **Vectorial_Proj:** is a vector that has the direction of *Perp_Vector_PJ* and the sense of *Cam_Virtual_Direction*.  
 
 ![Per_same](https://github.com/user-attachments/assets/48dc4954-64ad-4915-8645-61f310d2664d)  
 ![Per_opposite](https://github.com/user-attachments/assets/97c06c48-9457-4a1a-82fc-b3a5896c1ce6)  
-Even with a sudden exchange of PJs positions, the *Scalar_Proj* remains perpendicular to the PJs and retains its sense.  
-
-With these vectors we can take the angular difference (*Ang_Diff*) between *Cam_Virtual_Direction* and *Scalar_Proj*, and subtract the result to the Camera Y Rotation.  
+Even with a sudden exchange of PJs positions, the *Vectorial_Proj* remains perpendicular to the PJs and retains its sense.  
+> The *Vectorial_Proj* magnitud is downscale for practial reasons to avoid overlaping and to see where each vectors point towards to, because we want to see is their angles.  
+  
+With these vectors we can take the angular difference (*Ang_Diff*) between *Cam_Virtual_Direction* and *Vectorial_Proj*, and subtract the result to the Camera Y Rotation.  
 ![Angluar_Difference](https://github.com/user-attachments/assets/46e897da-8ce4-45d9-8a0f-e28a8501da3d)  
 ![Cam_Alligned](https://github.com/user-attachments/assets/f69455c0-0e59-46af-8c51-9d026c0ee2b3)  
 
@@ -68,5 +69,6 @@ This will give us a 3D Vector with only the Y Component, if this component is po
 >We can take Vector A like *CamtoCenter_vector* and Vector B like *PJ1Cam_vector*, their Y component are 0.  
 >The Vector AxB is the cross product *PJ1_crossed*, its Horizontal Components (X and Z) are 0.  
 
-# Next Adittion for future ver 3.0  
-Camera shake for game feeling!  
+# Next Adittion for future versions  
+*Camera shake for game feeling  
+*Allowing Custom Cinematic Camera Sequences for special situations like: throws, ultis, knockdowns, special attacks, etc...  
